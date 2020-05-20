@@ -159,6 +159,7 @@ public class BackgroundMode extends CordovaPlugin {
     @Override
     public void onDestroy()
     {
+        Activity context = cordova.getActivity();
         context.unbindService(connection);
         isBind = false;
         // stopService();
